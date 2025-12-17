@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع طالب الحقوق | LAWDZ</title>
+    <style>
+        /* هذا القسم خاص بالتنسيق (CSS) لتجميل الموقع */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #2c3e50; /* لون أزرق داكن */
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        p.subtitle {
+            font-size: 1.2em;
+            color: #bdc3c7;
+        }
+
+        /* حاوية البطاقات لترتيبها بشكل جميل */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* تصميم البطاقة الواحدة */
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            padding: 20px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border-top: 5px solid #3498db; /* خط ملون أعلى البطاقة */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* حركة بسيطة عند تمرير الماوس */
+        }
+
+        .card h3 {
+            color: #2c3e50;
+        }
+
+        /* تصميم الأزرار داخل البطاقات */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>موقع طالب الحقوق</h1>
+        <p class="subtitle">رفيقك للنجاح في المسار القانوني</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="card">
+            <h3>سنة أولى</h3>
+            <p>جذع مشترك</p>
+            <a href="#" class="btn">تصفح المواد</a>
+        </div>
+
+        <div class="card">
+            <h3>سنة ثانية</h3>
+            <p>جذع مشترك</p>
+            <a href="#" class="btn">تصفح المواد</a>
+        </div>
+
+        <div class="card">
+            <h3>سنة ثالثة</h3>
+            <p>تخصص قانون عام</p>
+            <a href="#" class="btn">تصفح المواد</a>
+        </div>
+
+        <div class="card">
+            <h3>سنة ثالثة</h3>
+            <p>تخصص قانون خاص</p>
+            <a href="#" class="btn">تصفح المواد</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 - مشروع طالب الحقوق</p>
+    </footer>
+
+</body>
+</html>
