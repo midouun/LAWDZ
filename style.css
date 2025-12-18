@@ -1,0 +1,214 @@
+/* style.css - ملف التنسيقات الموحد */
+
+/* === تنسيقات عامة === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* افتراضي للرئيسية، يمكن تعديله للصفحات الداخلية */
+}
+
+/* === الرأس (Header) === */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+p.subtitle {
+    font-size: 1.2em;
+    color: #bdc3c7;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #ecf0f1;
+}
+
+/* === الصفحة الرئيسية: الحاويات والبطاقات === */
+.container {
+    max-width: 1000px; /* عرض مناسب للجميع */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;       /* للرئيسية */
+    flex-wrap: wrap;     /* للرئيسية */
+    justify-content: center; /* للرئيسية */
+    gap: 20px;           /* مسافة بين البطاقات */
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-top: 5px solid #3498db;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #2c3e50;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* === الصفحات الداخلية (المقاييس) === */
+.content-wrapper {
+    /* حاوية مخصصة للمحتوى النصي لتكون مرتبة */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: right; /* المحتوى العربي يجب أن يكون يمين */
+}
+
+.module-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-right: 6px solid #3498db;
+    text-align: right;
+}
+
+h2.module-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h3 { color: #2980b9; margin-top: 20px; font-size: 1.3em; }
+h4 { color: #16a085; margin-bottom: 5px; }
+
+/* === الأكورديون (Details/Summary) === */
+details {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary:hover { background-color: #e9ecef; }
+
+summary::after {
+    content: "+"; 
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-left: 10px; /* مسافة صغيرة */
+}
+
+details[open] summary::after { content: "-"; }
+
+details[open] summary {
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #e8f4f8;
+    color: #2980b9;
+}
+
+.content-inner {
+    padding: 20px;
+    background-color: #fff;
+}
+
+ul { padding-right: 20px; margin-top: 5px; color: #555; }
+li { margin-bottom: 8px; }
+
+/* === صناديق الأمثلة والبادجات === */
+.example-box {
+    background-color: #fff8e1;
+    border-right: 4px solid #f1c40f;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+.example-box strong { color: #d35400; display: block; margin-bottom: 5px; }
+
+.semester-badge {
+    background-color: #e67e22;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* === التذييل === */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    clear: both;
+}
+
+/* === تحسينات الهاتف (Mobile Responsiveness) === */
+@media (max-width: 600px) {
+    h2.module-title {
+        font-size: 1.4em;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+}
